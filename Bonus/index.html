@@ -37,7 +37,7 @@
                 <!-- Stampa per ogni oggetto il testo -->
                 <li class="task" v-for="(item,i) in todos" :key="i">
                     <!-- Se false me lo sbarri altrimenti NO -->
-                    <span :class="item.done === false ? 'sbarrato' : ''">
+                    <span :class="item.done === true ? 'sbarrato' : ''">
                         {{item.text}}
                     </span>
                     <!-- MILESTONE 2 -->
