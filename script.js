@@ -37,7 +37,7 @@ createApp({
             this.todos.splice(i, 1);
         },
         addTask() { //MILESTONE 3
-            this.todos.unshift({ text: this.message });
+            this.todos.unshift({ text: this.message, done: false });
             this.message = "";
             //unshift = push pero' all'inizio anziche' alla fine
         }
