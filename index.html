@@ -34,11 +34,13 @@
             <ul>
                 <!-- MILESTONE 1 -->
                 <!-- Stampa per ogni oggetto il testo -->
-                <li v-for="item in todos">
+                <li class="task" v-for="(item,i) in todos" :key="i">
                     <!-- Se false me lo sbarri altrimenti NO -->
                     <span :class="item.done === false ? 'sbarrato' : ''">
                         {{item.text}}
                     </span>
+                    <!-- MILESTONE 2 -->
+                    <i class="fa-solid fa-xmark" @click="delTask(i)"></i>
                 </li>
             </ul>
         </div>

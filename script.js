@@ -29,5 +29,11 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        delTask(i) { //MILESTONE 2
+            //Partendo dall'indice i gli dico di rimuovere il primo 
+            this.todos.splice(i, 1);
+        }
     }
 }).mount("#app");
