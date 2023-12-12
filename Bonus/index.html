@@ -26,7 +26,7 @@
         <!-- New Task con input & BTN -->
         <div class="new_task">
             <!-- MILESTONE 3 -->
-            <input type="text" placeholder="Nuova task" v-model="message">
+            <input type="text" placeholder="Nuova task" v-model="message" @keyup.enter="addTask"> <!-- Bonus 1 -->
             <button @click="addTask">Aggiungi</button>
         </div>
 
