@@ -9,6 +9,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            error: false,
             message: "",
             todos: [
                 {
@@ -32,9 +33,14 @@ createApp({
             this.todos.splice(i, 1);
         },
         addTask() { //MILESTONE 3
-            this.todos.unshift({ text: this.message, done: false });
-            this.message = "";
-            //unshift = push pero' all'inizio anziche' alla fine
+            if (this.message.length < 5) {
+                this.error = true;
+            } else {
+                this.todos.unshift({ text: this.message, done: false });
+                //unshift = push pero' all'inizio anziche' alla fine
+                this.message = "";
+                this.error = false;
+            }
         }
     }
 }).mount("#app");

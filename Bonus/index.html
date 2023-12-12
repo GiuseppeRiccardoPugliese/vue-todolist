@@ -28,6 +28,13 @@
             <!-- MILESTONE 3 -->
             <input type="text" placeholder="Nuova task" v-model="message" @keyup.enter="addTask"> <!-- Bonus 1 -->
             <button @click="addTask">Aggiungi</button>
+
+            <!-- Gestione dell'errore all'inserimento di una task  -->
+            <div class="error" v-if="error">
+                <small style="color: red;">
+                    Devi inserire una task di almeno 5 caratteri
+                </small>
+            </div>
         </div>
 
         <!-- Output Tasks -->
