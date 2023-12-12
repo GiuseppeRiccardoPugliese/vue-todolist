@@ -6,3 +6,66 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    background-color: lightyellow;
+}
+
+/*************************************************
+    STILI CONTENITORE APP
+ *************************************************/
+#app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*************************************************
+    STILI INTESTAZIONE
+ *************************************************/
+.logo img {
+    width: 350px;
+}
+
+.logo {
+    margin-top: 100px;
+}
+
+
+/*************************************************
+    STILI NEWTASK
+ *************************************************/
+.new_task input,
+.new_task button {
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.new_task {
+    margin-top: 50px;
+}
+
+/*************************************************
+    STILI OUTPUT PER LE TASK AGGIUNTE/DA AGGIUNGERE
+ *************************************************/
+.tasks_container {
+    width: 80%;
+    height: 300px;
+    background-color: lightblue;
+    margin-top: 50px;
+}
+
+.tasks_container li {
+    list-style: none;
+    padding-left: 20px;
+    line-height: 2rem;
+    border-bottom: 1px solid black;
+}
+
+/*************************************************
+    STILI PER IL TEXT DEC
+ *************************************************/
+.sbarrato {
+    text-decoration: line-through;
+}

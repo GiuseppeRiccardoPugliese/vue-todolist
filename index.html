@@ -18,6 +18,30 @@
 
     <div id="app">
 
+        <!-- Intestazione -->
+        <div class="logo">
+            <img src="Img/logo.svg" alt="">
+        </div>
+
+        <!-- New Task con input & BTN -->
+        <div class="new_task">
+            <input type="text" placeholder="Nuova task">
+            <button>Aggiungi</button>
+        </div>
+
+        <!-- Output Tasks -->
+        <div class="tasks_container">
+            <ul>
+                <!-- MILESTONE 1 -->
+                <!-- Stampa per ogni oggetto il testo -->
+                <li v-for="item in todos">
+                    <!-- Se false me lo sbarri altrimenti NO -->
+                    <span :class="item.done === false ? 'sbarrato' : ''">
+                        {{item.text}}
+                    </span>
+                </li>
+            </ul>
+        </div>
 
     </div>
 
